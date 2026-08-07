@@ -1,13 +1,16 @@
+import ThemeToggle from "./ThemeToggle";
+
 const projects = [
   {
     number: "01",
-    title: "AfriHealth",
+    title: "AfriHealth (Hydra)",
     label: "Healthcare platform",
     description:
       "Backend engineering across a multi-tenant hospital platform spanning clinical, administrative, provider, and staff workflows.",
     proof: ["300+ REST endpoints", "81 database migrations", "20+ clinical modules"],
     stack: "Node.js · TypeScript · Express · PostgreSQL",
     tone: "blue",
+    links: [{ label: "Product website", href: "https://gethydra.io/" }],
   },
   {
     number: "02",
@@ -18,26 +21,38 @@ const projects = [
     proof: ["Agora RTC / RTM", "Dual-token auth", "Cloud recording"],
     stack: "Laravel · React · TypeScript · Agora",
     tone: "paper",
+    links: [{ label: "View Oyster", href: "https://www.oysterskin.com/" }],
   },
   {
     number: "03",
-    title: "AskOyster AI",
+    title: "AskOyster AI (Pearl)",
     label: "Practical AI integration",
     description:
-      "Application-layer integration of an existing domain-specialized RAG service, with streamed responses and allergy-aware skincare recommendations.",
+      "Application-layer integration of an existing domain-specialized RAG service, with streamed responses and user context aware skincare recommendations.",
     proof: ["SSE streaming", "Routine generation", "Safety-aware output"],
     stack: "PHP · Laravel · React · AI APIs",
     tone: "paper",
+    links: [{ label: "Try the product", href: "https://app.oysterskin.com/" }],
   },
   {
     number: "04",
     title: "Munachi",
     label: "Product in progress",
     description:
-      "A wedding and ceremony budget tracker growing into a focused multi-tenant SaaS for hosts, families, and planning teams.",
+      "An event and ceremony budget tracker growing into a focused multi-tenant SaaS for hosts, families, and planning teams.",
     proof: ["Multi-tenant design", "Budget workflows", "Early-stage build"],
     stack: "Express · TypeScript · PostgreSQL · React",
     tone: "ink",
+    links: [
+      {
+        label: "Frontend",
+        href: "https://wedding-budget-frontend.vercel.app/",
+      },
+      {
+        label: "API",
+        href: "https://github.com/nicholas-ugbala-dev/wedding_budget_backend",
+      },
+    ],
   },
 ];
 
@@ -72,9 +87,12 @@ export default function Home() {
           <a href="#experience">Experience</a>
           <a href="#about">About</a>
         </div>
-        <a className="nav-contact" href="mailto:kosinick01@gmail.com">
-          Let&apos;s talk <Arrow diagonal />
-        </a>
+        <div className="nav-actions">
+          <ThemeToggle />
+          <a className="nav-contact" href="mailto:kosinick01@gmail.com">
+            Let&apos;s talk <Arrow diagonal />
+          </a>
+        </div>
       </nav>
 
       <section className="hero shell" id="top">
@@ -150,8 +168,20 @@ export default function Home() {
                 {project.proof.map((item) => <li key={item}>{item}</li>)}
               </ul>
               <div className="card-footer">
-                <span>{project.stack}</span>
-                <Arrow diagonal />
+                <span className="card-stack">{project.stack}</span>
+                <div className="project-links" aria-label={`${project.title} links`}>
+                  {project.links.map((link) => (
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`${link.label} for ${project.title} (opens in a new tab)`}
+                      key={link.href}
+                    >
+                      {link.label} <Arrow diagonal />
+                    </a>
+                  ))}
+                </div>
               </div>
             </article>
           ))}

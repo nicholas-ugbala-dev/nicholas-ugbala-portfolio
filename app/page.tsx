@@ -3,34 +3,37 @@ import ThemeToggle from "./ThemeToggle";
 const projects = [
   {
     number: "01",
-    title: "AfriHealth (Hydra)",
-    label: "Healthcare platform",
+    title: "Hydra · AfriHealth",
+    label: "Multi-product healthcare platform",
     description:
-      "Backend engineering across a multi-tenant hospital platform spanning clinical, administrative, provider, and staff workflows.",
-    proof: ["300+ REST endpoints", "81 database migrations", "20+ clinical modules"],
+      "Backend engineering across HydraEMR for healthcare providers, HydraCustomer for patient-owned records and clinical interactions, and HydraConsult for configurable consultation booking.",
+    proof: ["EMR + clinical workflows", "Patient record access", "Consultation booking"],
     stack: "Node.js · TypeScript · Express · PostgreSQL",
     tone: "blue",
-    links: [{ label: "Product website", href: "https://gethydra.io/" }],
+    links: [
+      { label: "Hydra EMR", href: "https://gethydra.io/products/hydra-emr" },
+      { label: "HydraConsult", href: "https://gethydra.io/products/hydra-consult" },
+    ],
   },
   {
     number: "02",
-    title: "Oyster Meet",
-    label: "Real-time consultation",
+    title: "Oyster Clinic OS & Meet",
+    label: "Clinical operations · Virtual care",
     description:
-      "A role-aware virtual consultation experience with secure sessions, consent-aware cloud recording, screen sharing, and real-time messaging.",
-    proof: ["Agora RTC / RTM", "Dual-token auth", "Cloud recording"],
+      "Built the clinic workflow end to end: staff shifts, appointment types, conflict-free booking, client records, and live consultations with AI skin-scan data beside the call, recordings, and AI-generated summaries.",
+    proof: ["Conflict-free scheduling", "Live AI scan context", "Recording + AI summaries"],
     stack: "Laravel · React · TypeScript · Agora",
     tone: "paper",
-    links: [{ label: "View Oyster", href: "https://www.oysterskin.com/" }],
+    links: [{ label: "Explore Clinic OS", href: "https://www.oysterskin.com/clinics" }],
   },
   {
     number: "03",
-    title: "AskOyster AI (Pearl)",
-    label: "Practical AI integration",
+    title: "Pearl · AskOyster AI",
+    label: "Embedded AI assistant",
     description:
-      "Application-layer integration of an existing domain-specialized RAG service, with streamed responses and user context aware skincare recommendations.",
-    proof: ["SSE streaming", "Routine generation", "Safety-aware output"],
-    stack: "PHP · Laravel · React · AI APIs",
+      "Built an embedded skincare assistant with streamed, RAG-grounded conversations and function calling that could guide a client into appointment booking or launch a standalone AI face-skin scan directly from the widget.",
+    proof: ["Embedded AI widget", "RAG + function calling", "Booking + scan actions"],
+    stack: "Laravel · React · TypeScript · RAG · SSE",
     tone: "paper",
     links: [{ label: "Try the product", href: "https://app.oysterskin.com/" }],
   },
@@ -61,13 +64,13 @@ const experience = [
     period: "Jul 2024 – Mar 2026",
     company: "AfriHealth Limited",
     role: "Software Engineer",
-    copy: "Built and evolved backend systems for a large healthcare product while maintaining careful access control, schema reliability, and production stability.",
+    copy: "Built and evolved backend systems across HydraEMR, HydraCustomer, and HydraConsult while maintaining careful access control, schema reliability, and production stability.",
   },
   {
     period: "Aug 2025 – Apr 2026",
     company: "Oyster Skin",
     role: "Software Engineer · Founding Engineer",
-    copy: "Shipped AI-enabled skincare and real-time consultation features across Laravel services and React interfaces in an early-stage product environment.",
+    copy: "Built Clinic OS workflows from scheduling and client records to AI-assisted virtual consultations, then shipped Pearl, an embedded RAG assistant that turns conversations into booking and skin-scan actions.",
   },
 ];
 

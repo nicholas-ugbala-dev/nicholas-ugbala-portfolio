@@ -1,3 +1,4 @@
+import CopyEmailButton from "./CopyEmailButton";
 import ThemeToggle from "./ThemeToggle";
 
 const projects = [
@@ -92,8 +93,8 @@ export default function Home() {
         </div>
         <div className="nav-actions">
           <ThemeToggle />
-          <a className="nav-contact" href="mailto:kosinick01@gmail.com">
-            Let&apos;s talk <Arrow diagonal />
+          <a className="nav-contact" href="#contact">
+            Let&apos;s talk <span aria-hidden="true">↓</span>
           </a>
         </div>
       </nav>
@@ -237,13 +238,23 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="contact shell">
-        <p className="eyebrow">Have a hard product problem?</p>
+      <section className="contact shell" id="contact">
+        <p className="eyebrow">Open to roles &amp; collaborations</p>
         <h2>Let&apos;s build something<br /><em>that holds up.</em></h2>
+        <p className="contact-supporting">
+          For engineering roles, healthcare products, AI integrations, or thoughtful
+          collaborations, send me a note.
+        </p>
         <div className="contact-bottom">
-          <a className="contact-email" href="mailto:kosinick01@gmail.com">
-            kosinick01@gmail.com <Arrow diagonal />
-          </a>
+          <div className="contact-email-group">
+            <a
+              className="contact-email"
+              href="mailto:hello@nicholas-ugbala.dev?subject=Portfolio%20enquiry"
+            >
+              hello@nicholas-ugbala.dev <Arrow diagonal />
+            </a>
+            <CopyEmailButton />
+          </div>
           <div className="socials">
             <a href="https://www.linkedin.com/in/nicholas-ugbala" target="_blank" rel="noreferrer">LinkedIn</a>
             <a href="https://github.com/nicholas-ugbala-dev" target="_blank" rel="noreferrer">GitHub</a>

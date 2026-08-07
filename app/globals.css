@@ -64,8 +64,10 @@ button { font: inherit; }
   align-items: center;
   border-bottom: 1px solid var(--rule);
 }
-.brand { font: 700 25px/1 var(--font-geist-sans), sans-serif; letter-spacing: -.06em; width: max-content; }
-.brand span { color: var(--blue); }
+.brand { display: inline-flex; width: 47px; color: var(--ink); }
+.brand-mark { display: block; width: 100%; height: auto; overflow: visible; }
+.brand-mark-letters { fill: currentColor; }
+.brand-mark-dot { fill: var(--blue); }
 .nav-links { display: flex; gap: 34px; font-size: 13px; }
 .nav-links a, .socials a { position: relative; }
 .nav-links a::after, .socials a::after {

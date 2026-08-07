@@ -1,4 +1,5 @@
 import CopyEmailButton from "./CopyEmailButton";
+import LogoMark from "./LogoMark";
 import ThemeToggle from "./ThemeToggle";
 
 const projects = [
@@ -84,7 +85,7 @@ export default function Home() {
     <main>
       <nav className="nav shell" aria-label="Primary navigation">
         <a className="brand" href="#top" aria-label="Nicholas Ugbala, home">
-          NU<span>.</span>
+          <LogoMark />
         </a>
         <div className="nav-links">
           <a href="#work">Work</a>

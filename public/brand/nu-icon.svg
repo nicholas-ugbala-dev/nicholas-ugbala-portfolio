@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title description">
+  <title id="title">Nicholas Ugbala icon</title>
+  <desc id="description">A compact N U monogram and blue dot on an ivory square.</desc>
+  <rect fill="#f4f0e8" width="64" height="64" rx="12" />
+  <path fill="#171713" d="M7 46V17h7l13 17V17h7v29h-7L14 29v17H7Zm30-29h7v17c0 4 2 6 5 6s5-2 5-6V17h7v18c0 8-5 12-12 12s-12-4-12-12V17Z" />
+  <circle fill="#2346d3" cx="57" cy="45" r="3.5" />
+</svg>

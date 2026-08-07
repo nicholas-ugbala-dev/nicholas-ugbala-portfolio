@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .background { fill: #f4f0e8; }
+    .letters { fill: #171713; }
+    .dot { fill: #2346d3; }
+    @media (prefers-color-scheme: dark) {
+      .background { fill: #171713; }
+      .letters { fill: #f4f0e8; }
+      .dot { fill: #8da2ff; }
+    }
+  </style>
+  <rect class="background" width="64" height="64" rx="12" />
+  <path class="letters" d="M7 46V17h7l13 17V17h7v29h-7L14 29v17H7Zm30-29h7v17c0 4 2 6 5 6s5-2 5-6V17h7v18c0 8-5 12-12 12s-12-4-12-12V17Z" />
+  <circle class="dot" cx="57" cy="45" r="3.5" />
+</svg>
